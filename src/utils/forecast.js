@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + ' det er nå ' + body.currently.temperature + ' grader. Det er  ' + body.currently.precipProbability + '% sjangse for regn.')
+            callback(undefined, body.daily.data[0].summary + ' det er nå ' + body.currently.temperature + ' grader. Det er  ' + body.currently.precipProbability + '% sjangse for regn.' + "\n" + 'Høyeste temperatur i dag blir: ' + body.daily.data[0].temperatureMax)
         }
     })
 }
