@@ -66,7 +66,7 @@ app.get("/help",(req,res)=>{
         PageTitle:"Help page",
     });
 });
-  
+   
 app.get("/weather",(req,res)=>{
     if(!req.query.adresse){
         return res.send({error: "du må oppgi en adresse"});
